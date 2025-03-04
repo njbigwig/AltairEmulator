@@ -3,9 +3,16 @@
 
 
 ![Popular Electronics Magazine Front Cover](images/PopularElectronics.png)
+© 1975 Popular Electronics. All rights reserved.
+
+
 Emulates the MITS Altair 8800 and supports the execution of Altair 4K BASIC binary
 
-![Copilot Logo](images/CopilotLogo.png)
+Concept by Dave Dempski with alot of heavy lifting by Microsoft Copilot!
+<img src="images/CopilotLogo.png" alt="Copilot Logo" width="50" height="50">
+
+
+
 
 **Copyright and Trademark Notices** <br>
 Microsoft Copilot™ is a trademark of Microsoft Corporation. <br>
