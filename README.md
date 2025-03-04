@@ -1,6 +1,8 @@
 # Celebrating Microsoft's 50th Anniversary!
 ![Microsoft Logo](images/MicrosoftLogo.png)
 
+
+![Popular Electronics Magazine Front Cover](images/PopularElectronics.png)
 Emulates the MITS Altair 8800 and supports the execution of Altair 4K BASIC binary
 
 ![Copilot Logo](images/CopilotLogo.png)
