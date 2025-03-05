@@ -1,15 +1,22 @@
 # Celebrating Microsoft's 50th Anniversary!
-![Microsoft Logo](images/MicrosoftLogo.png)
-
-
-![Popular Electronics Magazine Front Cover](images/PopularElectronics.png)
-© 1975 Popular Electronics. All rights reserved.
-
-
-Emulates the MITS Altair 8800 and supports the execution of Altair 4K BASIC binary
+<img src="images/MicrosoftLogo.png" alt="Microsooft Logo" width="400" height="200"> 
+Microsoft was founded on April 4, 1975 and I wanted to create a project to honor its 50th anniversary in April 2025. <br> <br> <br>
 
 Concept by Dave Dempski with alot of heavy lifting by Microsoft Copilot!
-<img src="images/CopilotLogo.png" alt="Copilot Logo" width="50" height="50"> <br>
+<img src="images/CopilotLogo.png" alt="Copilot Logo" width="50" height="50"> <br> <br>
+
+<img src="images/PopularElectronics.png" alt="Popular Electronics Magazine Front Cover" width="764" height="670"> <br>
+© 1975 Popular Electronics. All rights reserved. <br>
+
+The MITS Altair 8800 was one the first commmercially successful "personal" computers which offered low-cost opportunities to a wide range of people, from hobbyists to developers. The assembled costs (USD) included: <br>
+* Altair 8800 computer: $621
+* Altair 4K BASIC: $60
+* 4K memory board: $338
+* Teletype serial interface board: $146
+* Teletype model 33: $1,500 <br>
+**TOTAL: $1,500**
+
+I have been learning Python and I wanted to leverage Microsoft Copilot to help complete some of the complex tasks. The altairemulator.py emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front switches and LEDs. <br>
 
 **Starting Copilot prompt**: <br>
 I want a Python script to emulate all Altair 8800 commands, LEDs are to be printed text statements, input ports are to be keyboard entries via an input_port function, outputs are to print statements via an output_port function, the program will read in a binary file, BASIC.rom and be able to simulate execution of the program.
