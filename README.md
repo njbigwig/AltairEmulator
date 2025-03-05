@@ -36,8 +36,6 @@ Momentary: switch starts in the middle position and can be momentarily moved up 
 
 I also need a method to be added to the class so I can register an event function to be called for a toggle switch off and on and for momentary switch up or down.  Create default event functions which have a print statement for the action and switch name. I need a method to change the switch type. <br>
 
-
-
 **Copyright and Trademark Notices** <br>
 Microsoft Copilot™ is a trademark of Microsoft Corporation. <br>
 BASIC is a registered trademark of Dartmouth University. <br>
