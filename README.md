@@ -16,6 +16,8 @@ The MITS Altair 8800 was one the first commmercially successful "personal" compu
 * Teletype model 33: $1,500 <br>
 **TOTAL: $1,500**
 
+The MITS Altair 8800 User Manual can be found <a href="docs/Altair8800UserManual.pdf" target="_blank">here</a>
+
 I have been learning Python and I wanted to leverage Microsoft Copilot to help complete some of the complex tasks. The altairemulator.py emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front switches and LEDs. <br>
 
 **Starting Copilot prompt**: <br>
