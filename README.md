@@ -1,6 +1,6 @@
 # Celebrating Microsoft's 50th Anniversary!
 <img src="images/MicrosoftLogo.png" alt="Microsooft Logo" width="400" height="200"> 
-Microsoft was founded on April 4, 1975 and I wanted to create a project to honor its 50th anniversary in April 2025. <br> <br> <br>
+Microsoft was founded on April 4, 1975 and I wanted to create a project to honor its 50th anniversary during April 2025. <br> <br> <br>
 
 Concept by Dave Dempski with alot of heavy lifting by Microsoft Copilot!
 <img src="images/CopilotLogo.png" alt="Copilot Logo" width="50" height="50"> <br> <br>
@@ -16,11 +16,18 @@ The MITS Altair 8800 was one the first commmercially successful "personal" compu
 * Teletype model 33: $1,500 <br>
 **TOTAL: $1,500**
 
-The MITS Altair 8800 User Manual can be found <a href="docs/Altair8800UserManual.pdf" target="_blank" rel="noopener noreferrer">here.</a>
+The MITS Altair 8800 User Manual can be found <a href="docs/Altair8800UserManual.pdf" target="_blank" rel="noopener noreferrer">here.</a> <br>
+
+The Altair 8800 was an amazing product, but it was very difficult to use.  You had to manually set addresses (16 bits) and assembler instructions (8 bit opcodes) via an array of toggle switches. Assembly code is how a computer processes commands so it is very fast and efficient, but it can take dozens of assembler lines just to print out a string.  Something was needed to truly empower Altair 8800 programmers so they could write code faster.  
 
 I have been learning Python and I wanted to leverage Microsoft Copilot to help complete some of the complex tasks. The altairemulator.py emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front panel switches and LEDs. <br>
 
-There sample BASIC programs included in this respository, including programs from the original Altair BASIC user manual:
+**Simulating a Teletype interface:** <br>
+* You would type in your input via the keyboard and it was sent to a dot matrix printer = very slow <br>
+* There was no BACKSPACE key on teletype keyboard, use the underscore character (_) to delete the previous character <br>
+* Altair 4K BASIC only supports uppercase characters, all alpabetical characters inputted are converted to uppercase <br>
+
+Sample BASIC programs included in this respository, including programs from the original Altair BASIC user manual:
 
 | BASIC File     | Notes |
 | ----------- | ----------- |
@@ -29,16 +36,29 @@ There sample BASIC programs included in this respository, including programs fro
 |helloworld|Classic first program|
 |numberguess|Guess if a number has a match in a DATA set|
 |primenumber|Bench to find 100 prime numbers - very long run time|
-|randomnumbers|Generate 10 random numbers, 1-10, needs RND function at start|
-|sort|Sort 8 numbers is ascending order|
+|randomnumbers|Generate 10 random numbers, 1-10, needs RND function support at start-up|
+|sort|Sort 8 numbers in ascending order|
 |sumof2numbers|Add 2 numbers |
 |usrfn|Assembly code implementation of USR() to read the Sense switches|
 |zeroguess|Checks if a number is zero or not|
 
-User function details - usr(10)
-TBD
+**User Function Details - usr(1):** <br>
+4K BASIC defines function usr() to allow for user define custom functions. When usr() is not defined the function handler defaults to illegal function call. If PRINT USR(1) is RUN, the user will receive an FC error. When the emulator is started with the --usrfn option, an assembler function is added at 0x0FFO.  The handler vector at address 0x0043-0x0044 is changed from 0x0498 to 0x0FF0. The user() function will be defined as: <br>
+<blockquote>
+<em>0x0FF1 0xFF ; Port = 0xFF (255) <br>
+    0x0FF2 0x47 ; MOV B,A  <br>
+    0x0FF3 0xAF ; XRA A  <br>
+    0x0FF4 0x2A ; LHLD  <br>
+    0x0FF5 0x06 ; 0x0006 = 0x07F9 -> FWordToFloat  <br>
+    0x0FF6 0x00  <br>
+    0x0FF7 0xE9  ; PCHL </em> <br>
+    </blockquote> <br>
+The usr() parameter is ignored.
 
-**Starting Copilot prompt**: <br>
+<br>
+<br>
+
+**Starting Copilot prompt:** <br>
 I want a Python script to emulate all Altair 8800 commands, LEDs are to be printed text statements, input ports are to be keyboard entries via an input_port function, outputs are to print statements via an output_port function, the program will read in a binary file, BASIC.rom and be able to simulate execution of the program.
 
 **Prompt to create simulated LEDs:** <br>
@@ -53,6 +73,9 @@ Toggle: can be set to on or off. A user can move the switch up or down by clicki
 Momentary: switch starts in the middle position and can be momentarily moved up or down. A user can momentarily toggle the switch up or down by clicking a mouse above or below the switch collar. After a momentarily toggle up or down, the switch will return to the center position.
 
 I also need a method to be added to the class so I can register an event function to be called for a toggle switch off and on and for momentary switch up or down.  Create default event functions which have a print statement for the action and switch name. I need a method to change the switch type. <br>
+
+<br>
+<br>
 
 **Copyright and Trademark Notices** <br>
 Microsoft Copilot™ is a trademark of Microsoft Corporation. <br>
