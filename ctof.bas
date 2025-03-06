@@ -1,0 +1,5 @@
+100 PRINT "CELSIUS TO FAHRENHEIT CONVERSION"
+110 FOR C = 0 TO 100
+120 F = (C * 9.0 / 5.0) + 32
+130 PRINT "Celsius: "; C; " Fahrenheit: "; F
+140 NEXT C
