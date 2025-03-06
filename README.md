@@ -14,7 +14,7 @@ The MITS Altair 8800 was one the first commmercially successful "personal" compu
 * 4K memory board: $338
 * Teletype serial interface board: $146
 * Teletype model 33: $1,500 <br>
-**TOTAL: $1,500** <br>
+**TOTAL: $2,665** <br>
 
 The Altair 8800 User Manual can be found <a href="docs/Altair8800UserManual.pdf" target="_blank" rel="noopener noreferrer">here.</a> <br>
 
