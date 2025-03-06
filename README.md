@@ -30,6 +30,8 @@ I have been learning Python. After reading some articles on the history and impa
 * [Python.org](https://www.python.org/downloads/) <br>
 * [Microsoft Store](https://apps.microsoft.com/detail/9NCVDN91XZQP?hl=en-us&gl=US&ocid=pdpshare) <br>
 
+If you have already installed Python, make sure your Python Package Manager (pip) is the latest version: <br>
+<em>python.exe -m pip install --upgrade pip </em? <br>
 
 **Simulating a Teletype interface:** <br>
 * You would enter in input via the keyboard and it was sent to a dot matrix printer = very slow & NO color monitor <br>
