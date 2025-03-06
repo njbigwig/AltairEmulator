@@ -34,7 +34,7 @@ I have been learning Python. After reading some articles on the history and impa
 
 | BASIC File     | Notes |
 | ----------- | ----------- |
-|compare2numbers |Is number A greater, less than or equal to number B|
+|compare2numbers |Is number A greater, less than, or equal to number B|
 |ctof  |Copilot generated - convert Celsius to Fahrenheit|
 |helloworld|Classic first program|
 |numberguess|Guess if a number has a match in a DATA set|
