@@ -25,7 +25,7 @@ There sample BASIC programs included in this respository, including programs fro
 | BASIC File     | Notes |
 | ----------- | ----------- |
 |compare2numbers |Is number A greater, less than or equal to number B|
-|ctof  |Copilot - convert Celsius to Fahrenheit|
+|ctof  |Copilot generated - convert Celsius to Fahrenheit|
 |helloworld|Classic first program|
 |numberguess|Guess if a number has a match in a DATA set|
 |primenumber|Bench to find 100 prime numbers - very long run time|
