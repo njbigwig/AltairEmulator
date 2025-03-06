@@ -39,7 +39,7 @@ If you have already installed Python, make sure your Python Package Manager (pip
 <em>pip install pillow [ENTER] </em><br> <br>
 
 ### Install Dot Matrix Font <br>
-* Download: [Da Font](https://www.dafont.com/dot-matrix.font) <br>
+* Download font from: [Da Font](https://www.dafont.com/dot-matrix.font) <br>
 * Extract the files from dot_matrix.zip <br>
 * Right mouse click on DOTMATRI.TTF and select Install <br><br>
 
@@ -49,9 +49,9 @@ If you have already installed Python, make sure your Python Package Manager (pip
 
 ### Altair 4K Source & Binary Files <br>
 Charles Mangin and Reuben Harris have done some great work in compiling the Altair 4K BASIC source code and providing a binary program file. <br>
-* Access the [Altair-BASIC GitHub repository:](https://github.com/option8/Altair-BASIC)  <br>
+* Access the [Altair-BASIC GitHub repository](https://github.com/option8/Altair-BASIC)  <br>
 * The files below are stored in your installation directory, e.g. c:\altair <br>
-* Download the BASIC disassembly-source.rom - the binary file emulator will load (rename the file to remove the space) <br>
+* Download the BASIC disassembly-source.rom - the binary file the emulator will load (rename the file to remove the space) <br>
 * Download BASIC disassembly-source.lst - this is the assembled source file and includes the addresses if you want to explore or debug the code <br><br>
 
 
