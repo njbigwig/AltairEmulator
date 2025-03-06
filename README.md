@@ -22,15 +22,15 @@ The Altair 8800 was an amazing product, but it was very difficult to use.  You h
 <img src="images/altair4kbasic.png" alt="Section of Altair 4K BASIC paper tape program"> <br>
 
 
-I have been learning Python and I wanted to leverage Microsoft Copilot to help complete some of the complex tasks. The altairemulator.py emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front panel switches and LEDs. <br>
+I have been learning Python. After reading some articles on the history and impacts Altair 8800, so I became fascinated with the trying to find an emulator to mimic how the Altair 8800 worked. Finding none, I started out with a concept and leveraged Microsoft Copilot to complete some of the complex tasks. The <em>altairemulator.py</em> emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front panel switches and LEDs. <br>
 
 **Simulating a Teletype interface:** <br>
 * You would enter in input via the keyboard and it was sent to a dot matrix printer = very slow & NO color monitor <br>
 * There was no BACKSPACE key on teletype keyboard, use the underscore character (_) to delete the previous character <br>
-* Altair 4K BASIC only supports uppercase characters, all alpabetical characters inputted are converted to uppercase <br> <br>
+* Altair 4K BASIC only supports uppercase characters, all alphabetical characters inputted are converted to uppercase <br> <br>
 <img src="images/teletype.png" alt="Picture of Teletype Model 33" width="356" height="211"> <br>
 
-Sample BASIC programs included in this respository, including programs from the original Altair BASIC user manual:
+<br>Sample BASIC programs included in this respository, including programs from the original Altair BASIC user manual:
 
 | BASIC File     | Notes |
 | ----------- | ----------- |
@@ -57,7 +57,7 @@ The Altair BASIC User Manual can be found <a href="docs/AltairBASICReferenceManu
     0x0FF5 0x06 ; 0x0006 = 0x07F9 -> FWordToFloat  <br>
     0x0FF6 0x00  <br>
     0x0FF7 0xE9  ; PCHL </em> <br>
-    </blockquote> <br>
+    </blockquote> 
 The usr() parameter is ignored.
 
 <br>
