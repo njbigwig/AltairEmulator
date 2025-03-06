@@ -14,20 +14,22 @@ The MITS Altair 8800 was one the first commmercially successful "personal" compu
 * 4K memory board: $338
 * Teletype serial interface board: $146
 * Teletype model 33: $1,500 <br>
-**TOTAL: $1,500**
+**TOTAL: $1,500** <br>
 
-The MITS Altair 8800 User Manual can be found <a href="docs/Altair8800UserManual.pdf" target="_blank" rel="noopener noreferrer">here.</a> <br>
+
+The Altair BASIC User Manual can be found <a href="docs/AltairBASICReferenceManual.pdf" target="_blank" rel="noopener noreferrer">here.</a> <br>
 
 The Altair 8800 was an amazing product, but it was very difficult to use.  You had to manually set addresses (16 bits) and assembler instructions (8 bit opcodes) via an array of toggle switches. Assembly code is how a computer natively processes commands so it is very fast and efficient, but it can take dozens of assembler lines just to print out a string of characters.  Something was needed to truly empower Altair 8800 programmers so they could write code faster and easier. A high-level language (HLL) was needed to bridge the gap between how humans represent things and how computers execute them. **Bill Gates, Paul Allen, and Monte Davidoff** launched Altair 4K BASIC on July 1, 1979. BASIC, Beginners All-purpose Instruction Code, was an HLL which efficiently bridged the gap. One of Micro-Soft's first products was not distributed via software download, CD, or floppy disk, it was on paper tape! It took approximately 8 minutes to load the Altair 4K BASIC program via the paper reader on a Teletype. <br><br>
-<img src="images/altair4kbasic.png" alt="Sample of Altair 4K BASIC program paper take"> <br>
+<img src="images/altair4kbasic.png" alt="Section of Altair 4K BASIC paper tape program"> <br>
 
 
 I have been learning Python and I wanted to leverage Microsoft Copilot to help complete some of the complex tasks. The altairemulator.py emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front panel switches and LEDs. <br>
 
 **Simulating a Teletype interface:** <br>
-* You would type in your input via the keyboard and it was sent to a dot matrix printer = very slow <br>
+* You would enter in input via the keyboard and it was sent to a dot matrix printer = very slow & NO color monitor <br>
 * There was no BACKSPACE key on teletype keyboard, use the underscore character (_) to delete the previous character <br>
-* Altair 4K BASIC only supports uppercase characters, all alpabetical characters inputted are converted to uppercase <br>
+* Altair 4K BASIC only supports uppercase characters, all alpabetical characters inputted are converted to uppercase <br> <br>
+<img src="images/teletype.png" alt="Picture of Teletype Model 33" width="356" height="211"> <br>
 
 Sample BASIC programs included in this respository, including programs from the original Altair BASIC user manual:
 
