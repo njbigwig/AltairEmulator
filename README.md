@@ -44,8 +44,15 @@ If you have already installed Python, make sure your Python Package Manager (pip
 * Right mouse click on DOTMATRI.TTF and select Install <br><br>
 
 ### Emulator Files <br>
-* Create a directory to store the emulator files, e.g. c:\altair
-* 
+* Create a directory to store the emulator files, e.g. c:\altair <br>
+* From AltairEmulator/, download all py, wav, bas, & png files to your directory <br><br>
+
+### Altair 4K Source & Binary Files <br>
+Charles Mangin and Reuben Harris have done some great work in compiling the Altair 4K BASIC source code and providing a binary program file. <br>
+* Access the [Altair-BASIC repository:]([https://github.com/option8/Altair-BASIC] <br>
+* The files below are stored in your installation directory, e.g. c:\altair <br>
+* Download the BASIC disassembly-source.rom - the binary file emulator will load (rename the file to remove the space) <br>
+* Download BASIC disassembly-source.lst - this is the assembled source file and includes the addresses if you want to explore or debug the code <br><br>
 
 
 
