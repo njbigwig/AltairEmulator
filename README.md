@@ -36,12 +36,16 @@ If you have already installed Python, make sure your Python Package Manager (pip
 <em>python.exe -m pip install --upgrade pip [ENTER]</em> <br> <br>
 
 ### Install Python Imaging Library (PIL) Package <br>
-<em>pip install pillow [ENTER] </em><br>
+<em>pip install pillow [ENTER] </em><br> <br>
 
 ### Install Dot Matrix Font <br>
 * Download: [Da Font]([https://www.dafont.com/dot-matrix.font] <br>
 * Extract the files from dot_matrix.zip <br>
-* Right mouse click on DOTMATRI.TTF and select Install <br>
+* Right mouse click on DOTMATRI.TTF and select Install <br><br>
+
+### Emulator Files <br>
+* Create a directory to store the emulator files, e.g. c:\altair
+* 
 
 
 
