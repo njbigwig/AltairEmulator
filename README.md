@@ -20,6 +20,24 @@ The MITS Altair 8800 User Manual can be found <a href="docs/Altair8800UserManual
 
 I have been learning Python and I wanted to leverage Microsoft Copilot to help complete some of the complex tasks. The altairemulator.py emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front panel switches and LEDs. <br>
 
+There sample BASIC programs included in this respository, including programs from the original Altair BASIC user manual:
+
+| BASIC File     | Notes |
+| ----------- | ----------- |
+|compare2numbers |Is number A greater, less than or equal to number B|
+|ctof  |Copilot - convert Celsius to Fahrenheit|
+|helloworld|Classic first program|
+|numberguess|Guess if a number has a match in a DATA set|
+|primenumber|Bench to find 100 prime numbers - very long run time|
+|randomnumbers|Generate 10 random numbers, 1-10, needs RND function at start|
+|sort|Sort 8 numbers is ascending order|
+|sumof2numbers|Add 2 numbers |
+|usrfn|Assembly code implementation of USR() to read the Sense switches|
+|zeroguess|Checks if a number is zero or not|
+
+User function details - usr(10)
+TBD
+
 **Starting Copilot prompt**: <br>
 I want a Python script to emulate all Altair 8800 commands, LEDs are to be printed text statements, input ports are to be keyboard entries via an input_port function, outputs are to print statements via an output_port function, the program will read in a binary file, BASIC.rom and be able to simulate execution of the program.
 
