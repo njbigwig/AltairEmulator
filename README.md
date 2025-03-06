@@ -39,7 +39,7 @@ If you have already installed Python, make sure your Python Package Manager (pip
 <em>pip install pillow [ENTER] </em><br>
 
 ### Install Dot Matrix Font <br>
-* Download: [Da Font]([https://www.python.org/downloads/](https://www.dafont.com/dot-matrix.font) <br>
+* Download: [Da Font]([https://www.dafont.com/dot-matrix.font] <br>
 * Extract the files from dot_matrix.zip <br>
 * Right mouse click on DOTMATRI.TTF and select Install <br>
 
