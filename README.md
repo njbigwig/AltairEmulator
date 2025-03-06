@@ -16,8 +16,7 @@ The MITS Altair 8800 was one the first commmercially successful "personal" compu
 * Teletype model 33: $1,500 <br>
 **TOTAL: $1,500** <br>
 
-
-The Altair BASIC User Manual can be found <a href="docs/AltairBASICReferenceManual.pdf" target="_blank" rel="noopener noreferrer">here.</a> <br>
+The Altair 8800 User Manual can be found <a href="docs/Altair8800UserManual.pdf" target="_blank" rel="noopener noreferrer">here.</a> <br>
 
 The Altair 8800 was an amazing product, but it was very difficult to use.  You had to manually set addresses (16 bits) and assembler instructions (8 bit opcodes) via an array of toggle switches. Assembly code is how a computer natively processes commands so it is very fast and efficient, but it can take dozens of assembler lines just to print out a string of characters.  Something was needed to truly empower Altair 8800 programmers so they could write code faster and easier. A high-level language (HLL) was needed to bridge the gap between how humans represent things and how computers execute them. **Bill Gates, Paul Allen, and Monte Davidoff** launched Altair 4K BASIC on July 1, 1979. BASIC, Beginners All-purpose Instruction Code, was an HLL which efficiently bridged the gap. One of Micro-Soft's first products was not distributed via software download, CD, or floppy disk, it was on paper tape! It took approximately 8 minutes to load the Altair 4K BASIC program via the paper reader on a Teletype. <br><br>
 <img src="images/altair4kbasic.png" alt="Section of Altair 4K BASIC paper tape program"> <br>
@@ -44,7 +43,9 @@ Sample BASIC programs included in this respository, including programs from the 
 |sort|Sort 8 numbers in ascending order|
 |sumof2numbers|Add 2 numbers |
 |usrfn|Assembly code implementation of USR() to read the Sense switches|
-|zeroguess|Checks if a number is zero or not|
+|zeroguess|Checks if a number is zero or not| <br>
+
+The Altair BASIC User Manual can be found <a href="docs/AltairBASICReferenceManual.pdf" target="_blank" rel="noopener noreferrer">here.</a> <br>
 
 **User Function Details - usr(1):** <br>
 4K BASIC defines function usr() to allow for user define custom functions. When usr() is not defined the function handler defaults to illegal function call. If PRINT USR(1) is RUN, the user will receive an FC error. When the emulator is started with the --usrfn option, an assembler function is added at 0x0FFO.  The handler vector at address 0x0043-0x0044 is changed from 0x0498 to 0x0FF0. The user() function will be defined as: <br>
