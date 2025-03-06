@@ -22,16 +22,28 @@ The Altair 8800 was an amazing product, but it was very difficult to use.  You h
 <img src="images/altair4kbasic.png" alt="Section of Altair 4K BASIC paper tape program"> <br>
 
 
-I have been learning Python. After reading some articles on the history and impacts Altair 8800, so I became fascinated with the trying to find an emulator to mimic how the Altair 8800 worked. Finding none, I started out with a concept and leveraged Microsoft Copilot to complete some of the complex tasks. The <em>altairemulator.py</em> emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front panel switches and LEDs. <br>
+I have been learning Python. After reading some articles on the history and impacts Altair 8800, so I became fascinated with the trying to find an emulator to mimic how the Altair 8800 worked. Finding none, I started out with a concept and leveraged Microsoft Copilot to complete some of the complex tasks. The <em>altairemulator.py</em> emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front panel switches and LEDs. This program currently supports Windows PCs only. <br>
 
 ## Installation <br>
 
-### Install Python (v3.12.9 or greater) <BR>
+### Install Python (v3.12.9 or greater) <br>
 * [Python.org](https://www.python.org/downloads/) <br>
 * [Microsoft Store](https://apps.microsoft.com/detail/9NCVDN91XZQP?hl=en-us&gl=US&ocid=pdpshare) <br>
 
+Update your Path Environmental Variable to include the directory where you installed the Python executables, e.g. py.exe <br>
+
 If you have already installed Python, make sure your Python Package Manager (pip) is the latest version: <br>
-<em>python.exe -m pip install --upgrade pip </em? <br>
+<em>python.exe -m pip install --upgrade pip [ENTER]</em> <br> <br>
+
+### Install Python Imaging Library (PIL) Package <br>
+<em>pip install pillow [ENTER] </em><br>
+
+### Install Dot Matrix Font <br>
+* Download: [Da Font]([https://www.python.org/downloads/](https://www.dafont.com/dot-matrix.font) <br>
+* Extract the files from dot_matrix.zip <br>
+* Right mouse click on DOTMATRI.TTF and select Install <br>
+
+
 
 **Simulating a Teletype interface:** <br>
 * You would enter in input via the keyboard and it was sent to a dot matrix printer = very slow & NO color monitor <br>
