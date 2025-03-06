@@ -24,6 +24,13 @@ The Altair 8800 was an amazing product, but it was very difficult to use.  You h
 
 I have been learning Python. After reading some articles on the history and impacts Altair 8800, so I became fascinated with the trying to find an emulator to mimic how the Altair 8800 worked. Finding none, I started out with a concept and leveraged Microsoft Copilot to complete some of the complex tasks. The <em>altairemulator.py</em> emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front panel switches and LEDs. <br>
 
+## Installation <br>
+
+### Install Python (v3.12.9 or greater) <BR>
+* [Python.org](https://www.python.org/downloads/) <br>
+* [Microsoft Store](https://apps.microsoft.com/detail/9NCVDN91XZQP?hl=en-us&gl=US&ocid=pdpshare) <br>
+
+
 **Simulating a Teletype interface:** <br>
 * You would enter in input via the keyboard and it was sent to a dot matrix printer = very slow & NO color monitor <br>
 * There was no BACKSPACE key on teletype keyboard, use the underscore character (_) to delete the previous character <br>
