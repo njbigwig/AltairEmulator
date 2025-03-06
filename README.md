@@ -18,7 +18,7 @@ The MITS Altair 8800 was one the first commmercially successful "personal" compu
 
 The MITS Altair 8800 User Manual can be found <a href="docs/Altair8800UserManual.pdf" target="_blank" rel="noopener noreferrer">here.</a> <br>
 
-The Altair 8800 was an amazing product, but it was very difficult to use.  You had to manually set addresses (16 bits) and assembler instructions (8 bit opcodes) via an array of toggle switches. Assembly code is how a computer processes commands so it is very fast and efficient, but it can take dozens of assembler lines just to print out a string.  Something was needed to truly empower Altair 8800 programmers so they could write code faster.  
+The Altair 8800 was an amazing product, but it was very difficult to use.  You had to manually set addresses (16 bits) and assembler instructions (8 bit opcodes) via an array of toggle switches. Assembly code is how a computer natively processes commands so it is very fast and efficient, but it can take dozens of assembler lines just to print out a string.  Something was needed to truly empower Altair 8800 programmers so they could write code faster and easier. A high-level language (HLL) was needed bridge the gap between how humans represent instructions and how computers execute them. Bill Gates, Paul Allen, and Monte Davidoff launched Altair 4K BASIC on July 1, 1979. BASIC, Beginners All-purpose Instruction Code, was an HLL which efficiently bridged the gap. 
 
 I have been learning Python and I wanted to leverage Microsoft Copilot to help complete some of the complex tasks. The altairemulator.py emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front panel switches and LEDs. <br>
 
