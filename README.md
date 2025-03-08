@@ -95,6 +95,7 @@ You can load a BASIC program (BAS text file) by clicking on the Load button at t
 The usr() function parameter is ignored. <br> <br>
 
 ## Getting Started <br>
+### Starting the Altair Emulator <br>
 Open a Command Prompt window and change to your installation directory.  To start the emulator, type in: <br>
 <em>py altairemulator.py rom=BASICdisassembly-source.rom [ENTER]</em> <br><br>
 The following options are available as command line arguements: <br>
@@ -102,24 +103,37 @@ The following options are available as command line arguements: <br>
 **--usrfn** = define user function (USR()) support, required to run usrfn.bas  <br>
 **--bp1 to --bp5** = stop executing if Program Counter equals 1 of the 5 breakpoint hexadecimal addresses (XXXX), see "BASIC disassembly-source.lst"<br>
 **--debuglevel 1-4** = print out debug information during program execution, higher level = greater cumulative details:
-*	0 = default – no debug info <br>
+*	0 = default – no debug information <br>
 *	1 = Program Counter + Opcode displayed <br>
 *	2 = Show LED & Switch actions <br>
 *	3 = Interrupts disabled or enabled <br>
-*	4 = prints opcode info to command window <br>
+*	4 = Prints opcode information <br>
 **--debuglogger** = select debug information saved to dblogger.txt<br><br>
-Note: displaying debug information will slow the emulator down. <br><br>
+Note: displaying debug information will slow the emulator down. <br>
 
-**Power Switch:** <br>
-* To start the emulator, turn on by clicking on the green area <br>
-* To exit the emulator, turn off by clicking on the red area  <br>
-<img src="images/powerswitch.png" alt="Close up of power switch with indications where to click" width="53" height="60"> 
+### **Power Switch** <br>
+* To start the emulator, turn ON by clicking the green area <br>
+* To exit the emulator, turn OFF by clicking the red area  <br>
+<img src="images/powerswitch.png" alt="Close up of power switch with indications where to click" width="53" height="60"> <br><br>
+The Altair emulator will launch in a separate window, maximize this window.  All keyboard input must be entered from the Command Window. Debug information, if enabled, will also be displayed in the Command Window.<br>
 
+### 4K BASIC Configuration
+**Memory Size Prompt:**<br>
+* Input 4096 [ENTER] - standard operation<br>
+* Input 4086 [ENTER] - using usrfn option<br>
 
+**Terminal Width Prompt:**<br>
+* Input 80 [ENTER]<br>
 
+**Optional Component Prompts:**<br>
+* Want SIN: Input N [ENTER]<br>
+* Want RND: Input N [ENTER] / Y [ENTER] to run randomnumbers.bas<br>
+* Want SQR: Input N [ENTER]<br>
+<br>
 
-
-<img src="images/emulator.png" alt="Screenshot of Altair emulator window"> 
+<img src="images/emulator.png" alt="Screenshot of Altair emulator window"> <br>
+The test command has already been entered: <br>
+<em>PRINT 2 + 2 [ENTER]</em> <br> <br>
 
 <br><br>
 
