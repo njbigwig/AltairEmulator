@@ -112,7 +112,10 @@ The following options are available as command line arguements: <br>
 **--debuglogger** = select debug information saved to dblogger.txt<br><br>
 Note: displaying debug information will slow the emulator down. <br><br>
 
-
+**Power Switch:** <br>
+* To start the emulator, turn on by clicking on the green area <br>
+* To exit the emulator, turn off by clicking on the red area  <br>
+<img src="images/powerswitch.png" alt="Close up of power switch with indications where to click" width="53" height="60"> 
 
 
 
