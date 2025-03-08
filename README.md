@@ -135,7 +135,70 @@ The Altair emulator will launch in a separate window, maximize this window.  All
 The test command has already been entered: <br>
 <em>PRINT 2 + 2 [ENTER]</em> <br> <br>
 
-<br><br>
+The data and address switches are single pole single throw (SPST), which means the switch is on or off. Clicking the top of the gray circle will turn the switch on, while clicking on the bottom of the gray circle will turn the switch off. The default state of these switches is off.<br><br>
+The Stop/Run, Single Step, Examine/Examine Next, and Deposit/Deposit Next are single pole double throw (SPDT) momentary toggle switches. With the exception of Single Step, these switches have dual actions when the switch is activated up or down.  The default state of these switches is in the center position.
+<br>
+
+## Debugging <br>
+### Command Window <br>
+Breakpoints – emulator will pause running when the Program Counter (PC) is equal to the value of a command line breakpoint address – 4-byte hexadecimal address.
+
+Breakpoint at {pc:04X} - press [ENTER]
+
+Debug commands:
+--Single Step: [ENTER] to step, mem, cont, stack or flags—
+
+024C : EB XCHG = address : opcode opcode name
+
+SP: 0FFA
+A Reg: 00 | B Reg: 0C | C Reg: 31
+D Reg: 0C | E Reg: 33 | Flags: 46
+H Reg: 0C | L Reg: 22
+
+[ENTER] – single step through emulator execution
+
+stack – starting at current Stack Pointer (SP) address, display 20 bytes from the stack.
+
+mem – memory dump by specify a starting address and displaying the contents of 20 bytes.
+
+flags – displays the Sign, Zero, Auxiliary Carry, Parity, & Carry flags
+
+cont – exit single step mode and resume program execution <br>
+
+### Altair Front Panel <br>
+1.	Single Step Mode (Altair Single Step – not emulator debugging):
+a.	Not active while the emulator is running
+b.	Momentarily press up on Stop position on Stop-Run switch to pause the program
+c.	Momentarily press up on Single Step switch to execute an instruction, single stepping through program execution
+d.	Program Counter (PC) will be displayed on the address LEDs (not updated during RUN mode) 
+e.	Opcode will be displayed on data LEDs (not updated during RUN mode)
+f.	Single Step will not update LEDs after Examine switch is toggled up momentarily
+g.	Momentarily press down on Stop/Run switch to resume program execution
+2.	Reset Program:
+a.	Not active while the emulator is running
+b.	Click Stop position (up) on Stop-Run switch to pause the program
+c.	Click Reset position (up) on Reset-Clr switch to reset the Program Counter (PC) to 0x0000
+d.	Momentarily press down on Stop/Run switch to restart program execution or momentarily press up on Single Step switch to execute an instruction
+3.	Examine Memory:
+a.	Not active while the emulator is running
+b.	Click Stop position (up) on Stop-Run switch to pause the program
+c.	Set the starting address of the program area to be examined by setting the address via Address-data switches A15 – A0
+d.	Momentarily click Examine position (up) on Examine-Examine Next switch to read the memory contents of the indicated starting address
+e.	Memory contents is display in data LEDs D7 – D0
+f.	To access the next address, momentarily click Examine Next position (down) on Examine-Examine Next switch
+g.	The incremented address will be displayed in the Address LEDs A15-A0 and the memory contents will be displayed in the Data LEDs
+h.	Momentarily press down on Stop/Run switch to resume program execution
+i.	The Program Counter is not updated
+j.	After Examine is toggled, the address cannot be changed as the user can use Deposit and Deposit Next to change memory at an address.  D0-D7 switches are read to enter in opcodes or data.  The address can be changed if the user toggles Stop-Run switch momentarily up.
+k.	The Address and Data LEDs will represent the address and data bits
+4.	Deposit Memory
+a.	See steps a – d in Examine Memory to set the starting address of memory to write to
+b.	Set the Data switches (D7 – D0) to the value of the first byte to write
+c.	Momentarily click Deposit position (up) on Deposit-Deposit Next switch to write the first byte to the starting address
+d.	Enter in the next value to be written using the Data switches (D7 – D0)
+e.	Momentarily click Deposit Next position (down) on Deposit-Deposit Next switch to write the next byte to the starting address
+f.	Repeat steps d – e to write to the remaining memory locations
+g.	The Address and Data LEDs will represent the address and data bits<br><br>
 
 ## Known Issues/Limitations <br>
 1.	Fractional whole number division does not work, 1 / 2 = 1 <br>
@@ -143,7 +206,7 @@ The test command has already been entered: <br>
 3.	SIN() function does not work <br>
 4.	SQR() function does not work <br>
 5.	String length function (LEN()) is not included with Altair BASIC 4K <br>
-6.	Address and Data LEDs are lit only during single step mode to maintain performance <br>
+6.	Address and Data LEDs are lit only during Altrair front panel single step mode to maintain performance <br>
 7.	Reset/Clr switch actions are not implemented <br>
 8.  Protect/unprotect switch actions are not implemented <br>
 9.  Just like the original Altair 8800, the Aux switches do have any functions <br><br>
