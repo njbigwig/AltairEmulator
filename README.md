@@ -94,7 +94,7 @@ You can load a BASIC program (BAS text file) by clicking on the Load button at t
     </blockquote> 
 The usr() parameter is ignored. <br> <br>
 
-
+## Getting Started <br>
 
 <img src="images/emulator.png" alt="Screenshot of Altair emulator window"> 
 
