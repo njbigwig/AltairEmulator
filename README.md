@@ -22,7 +22,7 @@ The Altair 8800 was an amazing product, but it was very difficult to use.  You h
 <img src="images/altair4kbasic.png" alt="Section of Altair 4K BASIC paper tape program"> <br>
 
 
-I have been learning Python. After reading some articles on the history and impacts Altair 8800, so I became fascinated with the trying to find an emulator to mimic how the Altair 8800 worked. Finding none, I started out with a concept and leveraged Microsoft Copilot to complete some of the complex tasks. The <em>altairemulator.py</em> emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front panel switches and LEDs. This program currently runs Windows PCs only. The emulator can support programs up to 64KB. <br>
+I have been learning Python. After reading some articles on the history and impacts Altair 8800, so I became fascinated with the trying to find an emulator to mimic how the Altair 8800 worked. Finding none, I started out with a concept and leveraged Microsoft Copilot to complete some of the complex tasks. The <em>altairemulator.py</em> emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front panel switches and LEDs. This program currently runs Windows PCs only. The emulator can support programs up to 64KB. Contributions and suggestions welcome! <br>
 
 ## Installation <br>
 
@@ -95,11 +95,32 @@ You can load a BASIC program (BAS text file) by clicking on the Load button at t
 The usr() parameter is ignored. <br> <br>
 
 ## Getting Started <br>
+Open a Command Prompt window and change to your installation directory.  To start the emulator, type in: <br>
+<em>py altairemulator.py rom=BASICdisassembly-source.rom [ENTER]</em> <br>
+The following options are available as command line arguements: <br>
+**--nosound** = do not play the dot matrix printer sound as output is shown in the emulator window <br>
+**--usrfn** = define user function (USR()) support, required to run usrfn.bas  <br>
+**--bp1 to --bp5** = stop executing if Program Counter equals 1 of the 5 breakpoint hexadecimal addresses (XXXX), see "BASIC disassembly-source.lst"<br>
+**--debuglevel 1-4** = print out debug information during program execution, higher levels greater information<br>
+**--debuglogger** = select debug information saved to dblogger.txt<br>
+Note: displaying debug information will slow the emulator down. <br>
+
+
+
+
 
 <img src="images/emulator.png" alt="Screenshot of Altair emulator window"> 
 
-<br>
-<br>
+<br><br>
+
+## Known Issues/Limitations <br>
+1.	Fractional whole number division does not work, 1 / 2 = 1 <br>
+2.	String variables are not supported (8K BASIC only) <br>
+3.	SIN() function does not work <br>
+4.	SQR() function does not work <br>
+5.	String length function (LEN()) is not included with Altair BASIC 4K <br>
+6.	Address and Data LEDs are lit only during single step mode to maintain performance <br> <br>
+
 
 **Starting Copilot prompt:** <br>
 I want a Python script to emulate all Altair 8800 commands, LEDs are to be printed text statements, input ports are to be keyboard entries via an input_port function, outputs are to print statements via an output_port function, the program will read in a binary file, BASIC.rom and be able to simulate execution of the program.
