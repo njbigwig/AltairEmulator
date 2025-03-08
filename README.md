@@ -109,7 +109,7 @@ The following options are available as command line arguements: <br>
 *	2 = Show LED & Switch actions <br>
 *	3 = Interrupts disabled or enabled <br>
 *	4 = prints opcode info to command window <br>
-**--debuglogger** = select debug information saved to dblogger.txt<br>
+**--debuglogger** = select debug information saved to dblogger.txt<br><br>
 Note: displaying debug information will slow the emulator down. <br><br>
 
 
