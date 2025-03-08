@@ -33,7 +33,7 @@ I have been learning Python. After reading some articles on the history and impa
 Update your Path Environmental Variable to include the directory where you installed the Python executables, e.g. py.exe <br>
 
 If you have already installed Python, make sure your Python Package Manager (pip) is the latest version: <br>
-<em>python.exe -m pip install --upgrade pip [ENTER]</em> <br> <br>
+<em>py -m pip install --upgrade pip [ENTER]</em> <br> <br>
 
 ### Install Python Imaging Library (PIL) Package <br>
 <em>pip install pillow [ENTER] </em><br> <br>
