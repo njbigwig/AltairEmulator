@@ -56,8 +56,6 @@ Charles Mangin and Reuben Harris have done some great work in compiling the Alta
 
 You will need a display, keyboard, and a mouse or touchpad to use the emulator. <br><br>
 
-
-
 **Simulating a Teletype interface:** <br>
 * You would enter in input via the keyboard and it was sent to a dot matrix printer = very slow & NO color monitor <br>
 * There was no BACKSPACE key on teletype keyboard, use the underscore character (_) to delete the previous character <br>
@@ -98,7 +96,7 @@ The usr() function parameter is ignored. <br> <br>
 
 ## Getting Started <br>
 Open a Command Prompt window and change to your installation directory.  To start the emulator, type in: <br>
-<em>py altairemulator.py rom=BASICdisassembly-source.rom [ENTER]</em> <br>
+<em>py altairemulator.py rom=BASICdisassembly-source.rom [ENTER]</em> <br><br>
 The following options are available as command line arguements: <br>
 **--nosound** = do not play the dot matrix printer sound as output is shown in the emulator window <br>
 **--usrfn** = define user function (USR()) support, required to run usrfn.bas  <br>
