@@ -54,6 +54,8 @@ Charles Mangin and Reuben Harris have done some great work in compiling the Alta
 * Download the BASIC disassembly-source.rom - the binary file the emulator will load (rename the file to remove the space) <br>
 * Download BASIC disassembly-source.lst - this is the assembled source file and includes the addresses if you want to explore or debug the code <br><br>
 
+You will need a display, keyboard, and a mouse or touchpad to use the emulator. <br><br>
+
 
 
 **Simulating a Teletype interface:** <br>
@@ -92,7 +94,7 @@ You can load a BASIC program (BAS text file) by clicking on the Load button at t
     0x0FF6 0x00  <br>
     0x0FF7 0xE9  ; PCHL </em> <br>
     </blockquote> 
-The usr() parameter is ignored. <br> <br>
+The usr() function parameter is ignored. <br> <br>
 
 ## Getting Started <br>
 Open a Command Prompt window and change to your installation directory.  To start the emulator, type in: <br>
@@ -101,14 +103,16 @@ The following options are available as command line arguements: <br>
 **--nosound** = do not play the dot matrix printer sound as output is shown in the emulator window <br>
 **--usrfn** = define user function (USR()) support, required to run usrfn.bas  <br>
 **--bp1 to --bp5** = stop executing if Program Counter equals 1 of the 5 breakpoint hexadecimal addresses (XXXX), see "BASIC disassembly-source.lst"<br>
-**--debuglevel 1-4** = print out debug information during program execution, higher level = more details:
+**--debuglevel 1-4** = print out debug information during program execution, higher level = greater cumulative details:
 *	0 = default – no debug info <br>
 *	1 = Program Counter + Opcode displayed <br>
 *	2 = Show LED & Switch actions <br>
 *	3 = Interrupts disabled or enabled <br>
 *	4 = prints opcode info to command window <br>
 **--debuglogger** = select debug information saved to dblogger.txt<br>
-Note: displaying debug information will slow the emulator down. <br>
+Note: displaying debug information will slow the emulator down. <br><br>
+
+
 
 
 
