@@ -1,6 +1,6 @@
 # Celebrating Microsoft's 50th Anniversary!
 <img src="images/MicrosoftLogo.png" alt="Microsooft Logo" width="400" height="200"> 
-Microsoft was founded on April 4, 1975 and I wanted to create a project to honor its 50th anniversary during April 2025. <br> <br> <br>
+Microsoft was founded on April 4, 1975. I wanted to create a project to honor its 50th anniversary during April 2025 by bringing together one Microsoft's first products and its most current. <br> <br> <br>
 
 Concept by Dave Dempski with alot of heavy lifting by Microsoft Copilot!
 <img src="images/CopilotLogo.png" alt="Copilot Logo" width="50" height="50"> <br> <br>
@@ -18,11 +18,11 @@ The MITS Altair 8800 was one the first commmercially successful "personal" compu
 
 The Altair 8800 User Manual can be found <a href="docs/Altair8800UserManual.pdf" target="_blank" rel="noopener noreferrer">here.</a> <br>
 
-The Altair 8800 was an amazing product, but it was very difficult to use.  You had to manually set addresses (16 bits) and assembler instructions (8 bit opcodes) via an array of toggle switches. Assembly code is how a computer natively processes commands so it is very fast and efficient, but it can take dozens of assembler lines just to print out a string of characters.  Something was needed to truly empower Altair 8800 programmers so they could write code faster and easier. A high-level language (HLL) was needed to bridge the gap between how humans represent things and how computers execute them. **Bill Gates, Paul Allen, and Monte Davidoff** launched Altair 4K BASIC on July 1, 1979. BASIC, Beginners All-purpose Instruction Code, was an HLL which efficiently bridged the gap. One of Micro-Soft's first products was not distributed via software download, CD, or floppy disk, it was on paper tape! It took approximately 8 minutes to load the Altair 4K BASIC program via the paper reader on a Teletype. <br><br>
+The Altair 8800 was an amazing product, but it was very difficult to use.  You had to manually set addresses (16 bits) and assembler instructions (8 bit opcodes) via an array of toggle switches. Assembly code is how a computer natively processes commands so it is very fast and efficient, but it can take dozens of assembler lines just to print out a string of characters.  A break through was needed to truly empower Altair 8800 programmers so they could write code faster and easier. A high-level language (HLL) was needed to bridge the gap between how humans represent things and how computers execute them. **Bill Gates, Paul Allen, and Monte Davidoff** launched Altair 4K BASIC on July 1, 1979. BASIC, Beginners All-purpose Instruction Code, was an HLL which efficiently bridged the gap. One of Micro-Soft's first products was not distributed via software download, CD, or floppy disk. It was on paper tape! It took approximately 8 minutes to load the Altair 4K BASIC program via the paper reader on a Teletype. <br><br>
 <img src="images/altair4kbasic.png" alt="Section of Altair 4K BASIC paper tape program"> <br>
 
 
-I have been learning Python. After reading some articles on the history and impacts Altair 8800, so I became fascinated with the trying to find an emulator to mimic how the Altair 8800 worked. Finding none, I started out with a concept and leveraged Microsoft Copilot to complete some of the complex tasks. The <em>altairemulator.py</em> emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front panel switches and LEDs. This program currently supports Windows PCs only. <br>
+I have been learning Python. After reading some articles on the history and impacts Altair 8800, so I became fascinated with the trying to find an emulator to mimic how the Altair 8800 worked. Finding none, I started out with a concept and leveraged Microsoft Copilot to complete some of the complex tasks. The <em>altairemulator.py</em> emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front panel switches and LEDs. This program currently runs Windows PCs only. <br>
 
 ## Installation <br>
 
@@ -50,7 +50,7 @@ If you have already installed Python, make sure your Python Package Manager (pip
 ### Altair 4K Source & Binary Files <br>
 Charles Mangin and Reuben Harris have done some great work in compiling the Altair 4K BASIC source code and providing a binary program file. <br>
 * Access the [Altair-BASIC GitHub repository](https://github.com/option8/Altair-BASIC)  <br>
-* The files below are stored in your installation directory, e.g. c:\altair <br>
+* The files below need to be copied to your installation directory, e.g. c:\altair <br>
 * Download the BASIC disassembly-source.rom - the binary file the emulator will load (rename the file to remove the space) <br>
 * Download BASIC disassembly-source.lst - this is the assembled source file and includes the addresses if you want to explore or debug the code <br><br>
 
@@ -78,6 +78,8 @@ Charles Mangin and Reuben Harris have done some great work in compiling the Alta
 |zeroguess|Checks if a number is zero or not| <br>
 
 The Altair BASIC User Manual can be found <a href="docs/AltairBASICReferenceManual.pdf" target="_blank" rel="noopener noreferrer">here.</a> <br>
+
+You can load a BASIC program (BAS text file) by clicking on the Load button at the lower right corner of the emulator screen. <br>
 
 **User Function Details - usr(1):** <br>
 4K BASIC defines function usr() to allow for user define custom functions. When usr() is not defined the function handler defaults to illegal function call. If PRINT USR(1) is RUN, the user will receive an FC error. When the emulator is started with the --usrfn option, an assembler function is added at 0x0FFO.  The handler vector at address 0x0043-0x0044 is changed from 0x0498 to 0x0FF0. The user() function will be defined as: <br>
