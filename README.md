@@ -74,7 +74,7 @@ Charles Mangin and Reuben Harris have done some great work in compiling the Alta
 |randomnumbers|Generate 10 random numbers, 1-10, needs RND function support at start-up|
 |sort|Sort 8 numbers in ascending order|
 |sumof2numbers|Add 2 numbers |
-|usrfn|Assembly code implementation of USR() to read the Sense switches|
+|usrfn|Assembly code implementation of USR() to read the Sense switches (port 255)|
 |zeroguess|Checks if a number is zero or not| <br>
 
 The Altair BASIC User Manual can be found <a href="docs/AltairBASICReferenceManual.pdf" target="_blank" rel="noopener noreferrer">here.</a> <br>
@@ -101,7 +101,12 @@ The following options are available as command line arguements: <br>
 **--nosound** = do not play the dot matrix printer sound as output is shown in the emulator window <br>
 **--usrfn** = define user function (USR()) support, required to run usrfn.bas  <br>
 **--bp1 to --bp5** = stop executing if Program Counter equals 1 of the 5 breakpoint hexadecimal addresses (XXXX), see "BASIC disassembly-source.lst"<br>
-**--debuglevel 1-4** = print out debug information during program execution, higher levels greater information<br>
+**--debuglevel 1-4** = print out debug information during program execution, higher level = more details:
+*	0 = default – no debug info <br>
+*	1 = Program Counter + Opcode displayed <br>
+*	2 = Show LED & Switch actions <br>
+*	3 = Interrupts disabled or enabled <br>
+*	4 = prints opcode info to command window <br>
 **--debuglogger** = select debug information saved to dblogger.txt<br>
 Note: displaying debug information will slow the emulator down. <br>
 
@@ -119,7 +124,10 @@ Note: displaying debug information will slow the emulator down. <br>
 3.	SIN() function does not work <br>
 4.	SQR() function does not work <br>
 5.	String length function (LEN()) is not included with Altair BASIC 4K <br>
-6.	Address and Data LEDs are lit only during single step mode to maintain performance <br> <br>
+6.	Address and Data LEDs are lit only during single step mode to maintain performance <br>
+7.	Reset/Clr switch actions are not implemented <br>
+8.  Protect/unprotect switch actions are not implemented <br>
+9.  Just like the original Altair 8800, the Aux switches do have any functions <br><br>
 
 
 **Starting Copilot prompt:** <br>
