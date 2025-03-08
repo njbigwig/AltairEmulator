@@ -22,7 +22,7 @@ The Altair 8800 was an amazing product, but it was very difficult to use.  You h
 <img src="images/altair4kbasic.png" alt="Section of Altair 4K BASIC paper tape program"> <br>
 
 
-I have been learning Python. After reading some articles on the history and impacts Altair 8800, so I became fascinated with the trying to find an emulator to mimic how the Altair 8800 worked. Finding none, I started out with a concept and leveraged Microsoft Copilot to complete some of the complex tasks. The <em>altairemulator.py</em> emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front panel switches and LEDs. This program currently runs Windows PCs only. <br>
+I have been learning Python. After reading some articles on the history and impacts Altair 8800, so I became fascinated with the trying to find an emulator to mimic how the Altair 8800 worked. Finding none, I started out with a concept and leveraged Microsoft Copilot to complete some of the complex tasks. The <em>altairemulator.py</em> emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front panel switches and LEDs. This program currently runs Windows PCs only. The emulator can support programs up to 64KB. <br>
 
 ## Installation <br>
 
@@ -92,7 +92,11 @@ You can load a BASIC program (BAS text file) by clicking on the Load button at t
     0x0FF6 0x00  <br>
     0x0FF7 0xE9  ; PCHL </em> <br>
     </blockquote> 
-The usr() parameter is ignored.
+The usr() parameter is ignored. <br> <br>
+
+
+
+<img src="images/emulator.png" alt="Screenshot of Altair emulator window"> 
 
 <br>
 <br>
