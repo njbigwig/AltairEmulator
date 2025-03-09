@@ -205,7 +205,7 @@ H Reg: 0C | L Reg: 22 <br><br>
 2. Set the Data switches (D7 – D0) to the value of the first byte to write<br>
 3. Momentarily click up on Deposit-Deposit Next switch to write the first byte to the starting address<br>
 4. Enter in the next value to be written using the Data switches (D7 – D0)<br>
-5. Momentarily click down on Deposit-Deposit Next switch to write the next byte to the nextstar address<br>
+5. Momentarily click down on Deposit-Deposit Next switch to write the next byte to the next address<br>
 6. Repeat steps 4 and 5 to write to the remaining memory locations<br>
 7. The Address and Data LEDs will represent the address and data bits<br><br>
 
@@ -220,15 +220,18 @@ H Reg: 0C | L Reg: 22 <br><br>
 8.  Protect/unprotect switch actions are not implemented <br>
 9.  Just like the original Altair 8800, the Aux switches do have any functions <br><br>
 
+If an altair 8800 could be modified to be able support enough memory to hold an LLM, how long would it take to load the LLM, assuming an 110 BAUD TTY terminal for entry?<br>
+
+**Copilot:** To load a 1 GB large language model (LLM) into memory on a modified Altair 8800 using an 110 BAUD TTY terminal, it would take approximately 21,691.75 hours (about 2.5 years).<br>
 
 **Starting Copilot prompt:** <br>
-I want a Python script to emulate all Altair 8800 commands, LEDs are to be printed text statements, input ports are to be keyboard entries via an input_port function, outputs are to print statements via an output_port function, the program will read in a binary file, BASIC.rom and be able to simulate execution of the program.
+I want a Python script to emulate all Altair 8800 commands, LEDs are to be printed text statements, input ports are to be keyboard entries via an input_port function, outputs are to print statements via an output_port function, the program will read in a binary file, BASIC.rom and be able to simulate execution of the program.<br>
 
 **Prompt to create simulated LEDs:** <br>
-Using the tkinter base, I would to show an image using the file altair8800frontpanel.png, create a new class LED, which will represent the Altair 8800 LEDs.  The LED still have a state ON or OFF, methods to turn an LED off or on, get the status of the LED, assign a name to the LED.  The LEDs are to be circular with a diameter of 15 pixels.  When on, the LED will change to a bright red color, when off, the LED will be a dark red color. All LEDs will start off as OFF. A need a list of 36 LED objects.  The LED objects are to be placed at an x,y coordinate.
+Using the tkinter base, I would to show an image using the file altair8800frontpanel.png, create a new class LED, which will represent the Altair 8800 LEDs.  The LED still have a state ON or OFF, methods to turn an LED off or on, get the status of the LED, assign a name to the LED.  The LEDs are to be circular with a diameter of 15 pixels.  When on, the LED will change to a bright red color, when off, the LED will be a dark red color. All LEDs will start off as OFF. A need a list of 36 LED objects.  The LED objects are to be placed at an x,y coordinate.<br>
 
 **Prompt to create simulated front panel switches:** <br>
-Using the tkinter base,  I would to show a create a new class Switch, which will represent the Altair 8800 front panel switches. There will 2 types of switches: toggle and momentary. The Switches are to be circular with a diameter color of 15 pixels, dark gray. The switch pole will be a rectangular box, 3x20 pixels, light gray. Each Switch object shall have a name and function to read status.
+Using the tkinter base,  I would to show a create a new class Switch, which will represent the Altair 8800 front panel switches. There will 2 types of switches: toggle and momentary. The Switches are to be circular with a diameter color of 15 pixels, dark gray. The switch pole will be a rectangular box, 3x20 pixels, light gray. Each Switch object shall have a name and function to read status.<br>
 
 Switch types:
 Toggle: can be set to on or off. A user can move the switch up or down by clicking a mouse above or below the switch collar. The switch pole will move up or down when clicked.
@@ -237,7 +240,6 @@ Momentary: switch starts in the middle position and can be momentarily moved up 
 
 I also need a method to be added to the class so I can register an event function to be called for a toggle switch off and on and for momentary switch up or down.  Create default event functions which have a print statement for the action and switch name. I need a method to change the switch type. <br>
 
-<br>
 <br>
 
 **Copyright and Trademark Notices** <br>
