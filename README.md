@@ -120,7 +120,7 @@ The Altair emulator will launch in a separate window, maximize this window.  All
 ### 4K BASIC Configuration
 **Memory Size Prompt:**<br>
 * Input 4096 [ENTER] - standard operation<br>
-* Input 4086 [ENTER] - using usrfn option<br>
+* Input 4080 [ENTER] - using usrfn option<br>
 
 **Terminal Width Prompt:**<br>
 * Input 80 [ENTER]<br>
