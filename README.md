@@ -178,26 +178,29 @@ D Reg: 0C | E Reg: 33 | Flags: 46<br>
 H Reg: 0C | L Reg: 22 <br><br>
 
 ### Altair Front Panel <br>
-1.	Single Step Mode (Altair Single Step – not emulator debugging):
-a.	Not active while the emulator is running
-b.	Momentarily press up on Stop position on Stop-Run switch to pause the program
-c.	Momentarily press up on Single Step switch to execute an instruction, single stepping through program execution
-d.	Program Counter (PC) will be displayed on the address LEDs (not updated during RUN mode) 
-e.	Opcode will be displayed on data LEDs (not updated during RUN mode)
-f.	Single Step will not update LEDs after Examine switch is toggled up momentarily
-g.	Momentarily press down on Stop/Run switch to resume program execution
-3.	Examine Memory:
-a.	Not active while the emulator is running
-b.	Click Stop position (up) on Stop-Run switch to pause the program
-c.	Set the starting address of the program area to be examined by setting the address via Address-data switches A15 – A0
-d.	Momentarily click Examine position (up) on Examine-Examine Next switch to read the memory contents of the indicated starting address
-e.	Memory contents is display in data LEDs D7 – D0
-f.	To access the next address, momentarily click Examine Next position (down) on Examine-Examine Next switch
-g.	The incremented address will be displayed in the Address LEDs A15-A0 and the memory contents will be displayed in the Data LEDs
-h.	Momentarily press down on Stop/Run switch to resume program execution
-i.	The Program Counter is not updated
-j.	After Examine is toggled, the address cannot be changed as the user can use Deposit and Deposit Next to change memory at an address.  D0-D7 switches are read to enter in opcodes or data.  The address can be changed if the user toggles Stop-Run switch momentarily up.
-k.	The Address and Data LEDs will represent the address and data bits
+#### Single Step Mode:
+* Not active while the emulator is running<br>
+* Momentarily press up on Stop-Run switch to pause the program<br>
+* Momentarily press up on Single Step switch to execute an instruction, single stepping through program execution<br>
+* Program Counter (PC) will be displayed on the address LEDs (not updated during RUN mode) <br>
+* Opcode will be displayed on data LEDs (not updated during RUN mode)<br>
+* Single Step will not update LEDs after Examine switch is toggled up momentarily<br>
+* Momentarily press down on Stop/Run switch to resume program execution<br>
+
+#### Examine Memory:
+* Not active while the emulator is running <br>
+* Momentarily press up on Stop-Run switch to pause the program<br>
+* Set the starting address of the program area to be examined by setting the address via Address-data switches A15 – A0<br>
+* Momentarily click up on Examine-Examine Next switch to read the memory contents of the starting address<br>
+* Memory contents is display in data LEDs D7 – D0<br>
+* To access the next address, momentarily click down on Examine-Examine Next switch<br>
+* The incremented address will be displayed in the Address LEDs A15-A0 and the memory contents will be displayed in the Data LEDs<br>
+* Momentarily press down on Stop/Run switch to resume program execution <br>
+* The Program Counter is not updated<br>
+* After Examine is toggled, the address cannot be changed. The address can be changed if the user toggles Stop-Run switch momentarily down then up.<br>
+* The Address and Data LEDs will represent the address and data bits<br>
+
+
 4.	Deposit Memory
 a.	See steps a – d in Examine Memory to set the starting address of memory to write to
 b.	Set the Data switches (D7 – D0) to the value of the first byte to write
