@@ -1,6 +1,6 @@
 # Celebrating Microsoft's 50th Anniversary!
 <img src="images/MicrosoftLogo.png" alt="Microsooft Logo" width="400" height="200"> 
-Microsoft was founded on April 4, 1975. I wanted to create a project to honor its 50th anniversary during April 2025 by bringing together one Microsoft's first products and its most current. <br> <br> <br>
+Microsoft was founded on April 4, 1975. I wanted to create a project to honor its 50th anniversary during April 2025 by bringing together one Microsoft's first products and its most recent. <br> <br> <br>
 
 Concept by Dave Dempski with alot of heavy lifting by Microsoft Copilot!
 <img src="images/CopilotLogo.png" alt="Copilot Logo" width="50" height="50"> <br> <br>
@@ -179,36 +179,35 @@ H Reg: 0C | L Reg: 22 <br><br>
 
 ### Altair Front Panel <br>
 #### Single Step Mode:
-* Not active while the emulator is running<br>
-* Momentarily press up on Stop-Run switch to pause the program<br>
-* Momentarily press up on Single Step switch to execute an instruction, single stepping through program execution<br>
-* Program Counter (PC) will be displayed on the address LEDs (not updated during RUN mode) <br>
-* Opcode will be displayed on data LEDs (not updated during RUN mode)<br>
-* Single Step will not update LEDs after Examine switch is toggled up momentarily<br>
-* Momentarily press down on Stop/Run switch to resume program execution<br>
+1. Not active while the emulator is running<br>
+2. Momentarily press up on Stop-Run switch to pause the program<br>
+3. Momentarily press up on Single Step switch to execute an instruction, single stepping through program execution<br>
+4. Program Counter (PC) will be displayed on the address LEDs (not updated during RUN mode) <br>
+5. Opcode will be displayed on data LEDs (not updated during RUN mode)<br>
+6. Single Step will not update LEDs after Examine switch is toggled up momentarily<br>
+7. Momentarily press down on Stop/Run switch to resume program execution<br>
 
 #### Examine Memory:
-* Not active while the emulator is running <br>
-* Momentarily press up on Stop-Run switch to pause the program<br>
-* Set the starting address of the program area to be examined by setting the address via Address-data switches A15 – A0<br>
-* Momentarily click up on Examine-Examine Next switch to read the memory contents of the starting address<br>
-* Memory contents is display in data LEDs D7 – D0<br>
-* To access the next address, momentarily click down on Examine-Examine Next switch<br>
-* The incremented address will be displayed in the Address LEDs A15-A0 and the memory contents will be displayed in the Data LEDs<br>
-* Momentarily press down on Stop/Run switch to resume program execution <br>
-* The Program Counter is not updated<br>
-* After Examine is toggled, the address cannot be changed. The address can be changed if the user toggles Stop-Run switch momentarily down then up.<br>
-* The Address and Data LEDs will represent the address and data bits<br>
+1. Not active while the emulator is running <br>
+2. Momentarily press up on Stop-Run switch to pause the program<br>
+3. Set the starting address of the program area to be examined by setting the address via Address-data switches A15 – A0<br>
+4. Momentarily click up on Examine-Examine Next switch to read the memory contents of the starting address<br>
+5. Memory contents is display in data LEDs D7 – D0<br>
+6. To access the next address, momentarily click down on Examine-Examine Next switch<br>
+7. The incremented address will be displayed in the Address LEDs A15-A0 and the memory contents will be displayed in the Data LEDs<br>
+8. Momentarily press down on Stop/Run switch to resume program execution <br>
+9. The Program Counter is not updated<br>
+10. After Examine is toggled, the address cannot be changed. The address can be changed if the user toggles Stop-Run switch momentarily down then up.<br>
+11. The Address and Data LEDs will represent the address and data bits<br>
 
-
-4.	Deposit Memory
-a.	See steps a – d in Examine Memory to set the starting address of memory to write to
-b.	Set the Data switches (D7 – D0) to the value of the first byte to write
-c.	Momentarily click Deposit position (up) on Deposit-Deposit Next switch to write the first byte to the starting address
-d.	Enter in the next value to be written using the Data switches (D7 – D0)
-e.	Momentarily click Deposit Next position (down) on Deposit-Deposit Next switch to write the next byte to the starting address
-f.	Repeat steps d – e to write to the remaining memory locations
-g.	The Address and Data LEDs will represent the address and data bits<br><br>
+#### Deposit Memory:
+1. See steps 2 – 4 in Examine Memory to set the starting address of memory to update<br>
+2. Set the Data switches (D7 – D0) to the value of the first byte to write<br>
+3. Momentarily click up on Deposit-Deposit Next switch to write the first byte to the starting address<br>
+4. Enter in the next value to be written using the Data switches (D7 – D0)<br>
+5. Momentarily click down on Deposit-Deposit Next switch to write the next byte to the nextstar address<br>
+6. Repeat steps 4 and 5 to write to the remaining memory locations<br>
+7. The Address and Data LEDs will represent the address and data bits<br><br>
 
 ## Known Issues/Limitations <br>
 1.	Fractional whole number division does not work, 1 / 2 = 1 <br>
