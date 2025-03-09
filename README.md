@@ -51,7 +51,7 @@ If you have already installed Python, make sure your Python Package Manager (pip
 Charles Mangin and Reuben Harris have done some great work in compiling the Altair 4K BASIC source code and providing a binary program file. <br>
 * Access the [Altair-BASIC GitHub repository](https://github.com/option8/Altair-BASIC)  <br>
 * The files below need to be copied to your installation directory, e.g. c:\altair <br>
-* Download the BASIC disassembly-source.rom - the binary file the emulator will load (rename the file to remove the space) <br>
+* Download the BASIC disassembly-source.rom - the binary file (rom) the emulator will load (rename the file to remove the space) <br>
 * Download BASIC disassembly-source.lst - this is the assembled source file and includes the addresses if you want to explore or debug the code <br><br>
 
 You will need a display, keyboard, and a mouse or touchpad to use the emulator. <br><br>
@@ -133,37 +133,49 @@ The Altair emulator will launch in a separate window, maximize this window.  All
 
 <img src="images/emulator.png" alt="Screenshot of Altair emulator window"> <br>
 The test command has already been entered: <br>
-<em>PRINT 2 + 2 [ENTER]</em> <br> <br>
+<em>PRINT 2 + 2 [ENTER]</em> <br>
 
-The data and address switches are single pole single throw (SPST), which means the switch is on or off. Clicking the top of the gray circle will turn the switch on, while clicking on the bottom of the gray circle will turn the switch off. The default state of these switches is off.<br><br>
+The data and address switches are single pole single throw (SPST), which means the switch is either on or off. Clicking the top of the gray circle will turn the switch on, while clicking on the bottom of the gray circle will turn the switch off. The default state of these switches is off.<br><br>
 The Stop/Run, Single Step, Examine/Examine Next, and Deposit/Deposit Next are single pole double throw (SPDT) momentary toggle switches. With the exception of Single Step, these switches have dual actions when the switch is activated up or down.  The default state of these switches is in the center position.
 <br>
 
 ## Debugging <br>
 ### Command Window <br>
-Breakpoints – emulator will pause running when the Program Counter (PC) is equal to the value of a command line breakpoint address – 4-byte hexadecimal address.
+This mode allows a user to debug emulator execution of the rom binary file via the Command Prompt window. Referencing BASIC disassembly-source.lst file, we will set a breakpoint at address 02C2 (InputLineWith subroutine) on the command line: <br>
 
-Breakpoint at {pc:04X} - press [ENTER]
+<em>py altairemulator.py rom=BASICdisassembly-source.rom --bp1 02C2 [ENTER]</em> <br>
 
-Debug commands:
---Single Step: [ENTER] to step, mem, cont, stack or flags—
+| Address    | Data | Label | Command|
+| ----------- | ----------- |----------- |----------- |
+|02C2|3E3F|InputLineWith|MVI A,'?'|
+|02C4|DF | |RST 03 |
+|02C5|3E20 | | MVI A,' '|
+|02C7|DF | |RST 03|
+|02C8|CD3C03  | |CALL InputLine|
 
-024C : EB XCHG = address : opcode opcode name
+Breakpoints – emulator will pause running when the Program Counter (PC) is equal to the value of a command line breakpoint address – 4-byte hexadecimal address. The emulator will switch to single step mode when a breakpoint is encountered.<br>
 
-SP: 0FFA
-A Reg: 00 | B Reg: 0C | C Reg: 31
-D Reg: 0C | E Reg: 33 | Flags: 46
-H Reg: 0C | L Reg: 22
+Breakpoint at pc:02C2 - press [ENTER] <br>
 
-[ENTER] – single step through emulator execution
+**Debug Commands:** <br>
+[ENTER] – single step through emulator execution <br>
 
-stack – starting at current Stack Pointer (SP) address, display 20 bytes from the stack.
+stack – starting at current Stack Pointer (SP) address, display 20 bytes from the stack<br>
 
-mem – memory dump by specify a starting address and displaying the contents of 20 bytes.
+mem – memory dump by from a starting address and displaying the contents of 20 bytes<br>
 
-flags – displays the Sign, Zero, Auxiliary Carry, Parity, & Carry flags
+flags – displays the Sign, Zero, Auxiliary Carry, Parity, & Carry flags<br>
 
 cont – exit single step mode and resume program execution <br>
+
+Debug information displayed during Single Step mode: <br>
+
+024C : EB XCHG = address : opcode opcode name <br>
+
+SP: 0FFA<br>
+A Reg: 00 | B Reg: 0C | C Reg: 31<br>
+D Reg: 0C | E Reg: 33 | Flags: 46<br>
+H Reg: 0C | L Reg: 22 <br><br>
 
 ### Altair Front Panel <br>
 1.	Single Step Mode (Altair Single Step – not emulator debugging):
@@ -174,11 +186,6 @@ d.	Program Counter (PC) will be displayed on the address LEDs (not updated durin
 e.	Opcode will be displayed on data LEDs (not updated during RUN mode)
 f.	Single Step will not update LEDs after Examine switch is toggled up momentarily
 g.	Momentarily press down on Stop/Run switch to resume program execution
-2.	Reset Program:
-a.	Not active while the emulator is running
-b.	Click Stop position (up) on Stop-Run switch to pause the program
-c.	Click Reset position (up) on Reset-Clr switch to reset the Program Counter (PC) to 0x0000
-d.	Momentarily press down on Stop/Run switch to restart program execution or momentarily press up on Single Step switch to execute an instruction
 3.	Examine Memory:
 a.	Not active while the emulator is running
 b.	Click Stop position (up) on Stop-Run switch to pause the program
