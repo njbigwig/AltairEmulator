@@ -1,14 +1,14 @@
 # Celebrating Microsoft's 50th Anniversary!
 <img src="images/MicrosoftLogo.png" alt="Microsooft Logo" width="400" height="200"> 
-Microsoft was founded on April 4, 1975. I wanted to create a project to honor its 50th anniversary during April 2025 by bringing together one Microsoft's first products and its most recent. <br> <br> <br>
+Microsoft was founded on April 4, 1975. I wanted to create a project to honor its 50th anniversary during April 2025 by bringing together one of Microsoft's first products and its most recent. <br> <br> <br>
 
-Concept by Dave Dempski with alot of heavy lifting by Microsoft Copilot!
+Concept by Dave Dempski with a lot of heavy lifting by Microsoft Copilot!
 <img src="images/CopilotLogo.png" alt="Copilot Logo" width="50" height="50"> <br> <br>
 
 <img src="images/PopularElectronics.png" alt="Popular Electronics Magazine Front Cover" width="764" height="670"> <br>
 © 1975 Popular Electronics. All rights reserved. <br>
 
-The MITS Altair 8800 was one the first commmercially successful "personal" computers which offered low-cost opportunities to a wide range of people, from hobbyists to developers. The assembled costs (USD) included: <br>
+The MITS Altair 8800 was one the first commercially successful "personal" computers which offered low-cost opportunities to a wide range of people, from hobbyists to developers. The assembled costs (USD) included: <br>
 * Altair 8800 computer: $621
 * Altair 4K BASIC: $60
 * 4K memory board: $338
@@ -18,11 +18,11 @@ The MITS Altair 8800 was one the first commmercially successful "personal" compu
 
 The Altair 8800 User Manual can be found <a href="docs/Altair8800UserManual.pdf" target="_blank" rel="noopener noreferrer">here.</a> <br>
 
-The Altair 8800 was an amazing product, but it was very difficult to use.  You had to manually set addresses (16 bits) and assembler instructions (8 bit opcodes) via an array of toggle switches. Assembly code is how a computer natively processes commands so it is very fast and efficient, but it can take dozens of assembler lines just to print out a string of characters.  A break through was needed to truly empower Altair 8800 programmers so they could write code faster and easier. A high-level language (HLL) was needed to bridge the gap between how humans represent things and how computers execute them. **Bill Gates, Paul Allen, and Monte Davidoff** launched Altair 4K BASIC on July 1, 1979. BASIC, Beginners All-purpose Instruction Code, was an HLL which efficiently bridged the gap. One of Micro-Soft's first products was not distributed via software download, CD, or floppy disk. It was on paper tape! It took approximately 8 minutes to load the Altair 4K BASIC program via the paper reader on a Teletype. <br><br>
+The Altair 8800 was an amazing product, but it was very difficult to use.  You had to manually set addresses (16 bits) and assembler instructions (8-bit opcodes) via an array of toggle switches. Assembly code is how a computer natively processes commands so it is fast and efficient, but it can take dozens of assembler lines just to print out a string of characters.  A breakthrough was needed to truly empower Altair 8800 programmers so they could write code faster and easier. A high-level language (HLL) was needed to bridge the gap between how humans represent things and how computers execute them. **Bill Gates, Paul Allen, and Monte Davidoff** launched Altair 4K BASIC on July 1, 1979. BASIC, Beginners All-purpose Instruction Code, was an HLL which efficiently bridged the gap. One of Micro-Soft's first products was not distributed via software download, CD, or floppy disk. It was on paper tape! It took approximately 8 minutes to load the Altair 4K BASIC program via the paper reader on a Teletype. <br><br>
 <img src="images/altair4kbasic.png" alt="Section of Altair 4K BASIC paper tape program"> <br>
 
 
-I have been learning Python. After reading some articles on the history and impacts Altair 8800, so I became fascinated with the trying to find an emulator to mimic how the Altair 8800 worked. Finding none, I started out with a concept and leveraged Microsoft Copilot to complete some of the complex tasks. The <em>altairemulator.py</em> emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front panel switches and LEDs. This program currently runs Windows PCs only. The emulator can support programs up to 64KB. Contributions and suggestions welcome! <br>
+I have been learning Python. After reading some articles on the history and impacts Altair 8800, so I became fascinated with trying to find an emulator to mimic how the Altair 8800 worked. Finding none, I started out with a concept and leveraged Microsoft Copilot to complete some of the complex tasks. The <em>altairemulator.py</em> emulates the MITS Altair 8800 and supports the execution of the Altair 4K BASIC binary. A user can interact with the emulator via the simulated front panel switches and LEDs. This program currently runs Windows PCs only. The emulator can support programs up to 64KB. Contributions and suggestions welcome! <br>
 
 ## Installation <br>
 
@@ -57,12 +57,12 @@ Charles Mangin and Reuben Harris have done some great work in compiling the Alta
 You will need a display, keyboard, and a mouse or touchpad to use the emulator. <br><br>
 
 **Simulating a Teletype interface:** <br>
-* You would enter in input via the keyboard and it was sent to a dot matrix printer = very slow & NO color monitor <br>
-* There was no BACKSPACE key on teletype keyboard, use the underscore character (_) to delete the previous character <br>
+* You would enter input via the keyboard and it was sent to a dot matrix printer = very slow & NO color monitor <br>
+* There was no BACKSPACE key on the teletype keyboard, use the underscore character (_) to delete the previous character <br>
 * Altair 4K BASIC only supports uppercase characters, all alphabetical characters inputted are converted to uppercase <br> <br>
 <img src="images/teletype.png" alt="Picture of Teletype Model 33" width="356" height="211"> <br>
 
-<br>Sample BASIC programs included in this respository, including programs from the original Altair BASIC user manual:
+<br>Sample BASIC programs included in this repository, including programs from the original Altair BASIC user manual:
 
 | BASIC File     | Notes |
 | ----------- | ----------- |
@@ -98,7 +98,7 @@ The usr() function parameter is ignored. <br> <br>
 ### Starting the Altair Emulator <br>
 Open a Command Prompt window and change to your installation directory.  To start the emulator, type in: <br>
 <em>py altairemulator.py rom=BASICdisassembly-source.rom [ENTER]</em> <br><br>
-The following options are available as command line arguements: <br>
+The following options are available as command line arguments: <br>
 **--nosound** = do not play the dot matrix printer sound as output is shown in the emulator window <br>
 **--usrfn** = define user function (USR()) support, required to run usrfn.bas  <br>
 **--bp1 to --bp5** = stop executing if Program Counter equals 1 of the 5 breakpoint hexadecimal addresses (XXXX), see "BASIC disassembly-source.lst"<br>
@@ -215,12 +215,12 @@ H Reg: 0C | L Reg: 22 <br><br>
 3.	SIN() function does not work <br>
 4.	SQR() function does not work <br>
 5.	String length function (LEN()) is not included with Altair BASIC 4K <br>
-6.	Address and Data LEDs are lit only during Altrair front panel single step mode to maintain performance <br>
+6.	Address and Data LEDs are lit only during Altair front panel single step mode to maintain performance <br>
 7.	Reset/Clr switch actions are not implemented <br>
 8.  Protect/unprotect switch actions are not implemented <br>
 9.  Just like the original Altair 8800, the Aux switches do have any functions <br><br>
 
-If an altair 8800 could be modified to be able support enough memory to hold an LLM, how long would it take to load the LLM, assuming an 110 BAUD TTY terminal for entry?<br>
+If an Altair 8800 could be modified to be able support enough memory to hold an LLM, how long would it take to load the LLM, assuming an 110 BAUD TTY terminal for entry?<br>
 
 **Copilot:** To load a 1 GB large language model (LLM) into memory on a modified Altair 8800 using an 110 BAUD TTY terminal, it would take approximately 21,691.75 hours (about 2.5 years).<br>
 
@@ -228,7 +228,7 @@ If an altair 8800 could be modified to be able support enough memory to hold an 
 I want a Python script to emulate all Altair 8800 commands, LEDs are to be printed text statements, input ports are to be keyboard entries via an input_port function, outputs are to print statements via an output_port function, the program will read in a binary file, BASIC.rom and be able to simulate execution of the program.<br>
 
 **Prompt to create simulated LEDs:** <br>
-Using the tkinter base, I would to show an image using the file altair8800frontpanel.png, create a new class LED, which will represent the Altair 8800 LEDs.  The LED still have a state ON or OFF, methods to turn an LED off or on, get the status of the LED, assign a name to the LED.  The LEDs are to be circular with a diameter of 15 pixels.  When on, the LED will change to a bright red color, when off, the LED will be a dark red color. All LEDs will start off as OFF. A need a list of 36 LED objects.  The LED objects are to be placed at an x,y coordinate.<br>
+Using the tkinter base, I would to show an image using the file altair8800frontpanel.png, create a new class LED, which will represent the Altair 8800 LEDs.  The LEDs have a state ON or OFF, methods to turn an LED off or on, get the status of the LED, assign a name to the LED.  The LEDs are to be circular with a diameter of 15 pixels.  When on, the LED will change to a bright red color, when off, the LED will be a dark red color. All LEDs will start off as OFF. A need a list of 36 LED objects.  The LED objects are to be placed at an x,y coordinate.<br>
 
 **Prompt to create simulated front panel switches:** <br>
 Using the tkinter base,  I would to show a create a new class Switch, which will represent the Altair 8800 front panel switches. There will 2 types of switches: toggle and momentary. The Switches are to be circular with a diameter color of 15 pixels, dark gray. The switch pole will be a rectangular box, 3x20 pixels, light gray. Each Switch object shall have a name and function to read status.<br>
